@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CHANGE THESE TWO LINES FOR EACH ARTICLE -->
+  <meta name="description" content="A Dimension 30 journal article.">
+  <title>Article Title | Dimension 30</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="brand" href="index.html" aria-label="Dimension 30 home">
+      <span class="brand-mark"><img src="image0.png" alt="Dimension 30 logo"></span>
+      <span class="brand-name">Dimension 30</span>
+    </a>
+
+    <nav class="page-nav">
+      <a class="hide-mobile" href="blog.html">Journal</a>
+      <a class="nav-cta" href="index.html#contact">Book a Session</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article-shell">
+      <p class="section-kicker">Journal Category</p>
+
+      <!-- CHANGE THE TITLE -->
+      <h1>Your article title goes here.</h1>
+
+      <!-- CHANGE DATE / READING TIME -->
+      <p class="article-meta">By Anurag Datta · Month Day, Year · 5 min read</p>
+
+      <div class="article-body">
+        <p>
+          Replace this paragraph with the opening of the article.
+        </p>
+
+        <h2>A section heading</h2>
+
+        <p>
+          Continue the article here. You can use as many paragraphs and headings as you need.
+        </p>
+
+        <blockquote>
+          A sentence worth slowing down for can live here.
+        </blockquote>
+
+        <p>
+          Finish the article here.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Dimension 30</strong>
+      <span>Awareness · Alignment · Embodiment</span>
+    </div>
+
+    <p>
+      Holistic coaching and spiritual guidance are not substitutes for medical,
+      psychological, legal or financial care.
+    </p>
+
+    <div class="footer-links">
+      <a href="blog.html">Journal</a>
+      <a href="index.html#contact">Book a Session</a>
+      <span>© <span id="year"></span> Dimension 30</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
