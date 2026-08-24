@@ -1,0 +1,65 @@
+name: Publish a blog post
+description: Write and publish a new Dimension 30 Journal article
+title: "[Blog] "
+labels:
+  - blog-post
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Dimension 30 Journal Publisher
+        Fill in the form below. After you submit it, GitHub will turn it into a finished article and publish it automatically.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Choose the section that best fits the article.
+      options:
+        - Astrology
+        - Vastu
+        - Meditation
+        - Life Coaching
+        - Gemology
+        - Conscious Living
+        - Journal
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Short description
+      description: One or two sentences shown on the Journal page.
+      placeholder: What will the reader learn or reflect on?
+    validations:
+      required: true
+
+  - type: textarea
+    id: article
+    attributes:
+      label: Article
+      description: Write the complete article. You may use headings, lists, bold text and quotations.
+      placeholder: |
+        Begin your article here.
+
+        ## A section heading
+
+        Continue writing here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Featured image (optional)
+      description: Drag an image into this box, or paste a direct https image link.
+      placeholder: Drag and drop an image here.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have reviewed this article and want to publish it publicly.
+          required: true
