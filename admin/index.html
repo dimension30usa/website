@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Journal Publisher | Dimension 30</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#17332f; --jade:#296b61; --cream:#f8f4eb; --gold:#c49a52; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; color:var(--ink); background:linear-gradient(145deg,#f8f4eb,#e6f1ed); font-family:Inter,sans-serif; }
+    main { width:min(720px,100%); padding:clamp(32px,7vw,72px); background:rgba(255,255,255,.82); border:1px solid rgba(41,107,97,.2); box-shadow:0 24px 70px rgba(23,51,47,.14); text-align:center; }
+    .mark { width:88px; height:88px; object-fit:contain; margin-bottom:18px; }
+    .kicker { color:var(--jade); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:600; }
+    h1 { margin:.35em 0 .25em; font:600 clamp(2.4rem,7vw,4.5rem)/.95 "Cormorant Garamond",serif; }
+    .intro { max-width:540px; margin:0 auto 30px; line-height:1.7; color:#49625e; }
+    .button { display:inline-block; padding:16px 24px; color:white; background:var(--jade); text-decoration:none; font-weight:600; border-radius:2px; box-shadow:0 10px 25px rgba(41,107,97,.2); }
+    .button:hover { background:var(--ink); }
+    ol { max-width:480px; margin:36px auto 0; padding-left:24px; text-align:left; line-height:1.8; color:#49625e; }
+    .back { display:inline-block; margin-top:30px; color:var(--jade); }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="mark" src="../image0.png" alt="">
+    <p class="kicker">Dimension 30 Journal</p>
+    <h1>Publish a new article.</h1>
+    <p class="intro">Use the guided form to write, review and publish. The finished article will appear in the Journal automatically.</p>
+    <a class="button" href="https://github.com/dimension30usa/website/issues/new?template=blog-post.yml">Write a New Post</a>
+    <ol>
+      <li>Sign into the Dimension 30 GitHub account if asked.</li>
+      <li>Complete the title, category, summary and article.</li>
+      <li>Submit the form. Publishing normally takes about a minute.</li>
+    </ol>
+    <a class="back" href="../blog.html">← Return to the Journal</a>
+  </main>
+</body>
+</html>
