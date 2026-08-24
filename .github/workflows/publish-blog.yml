@@ -1,0 +1,39 @@
+name: Publish Dimension 30 blog post
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: dimension30-blog-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: startsWith(github.event.issue.title, '[Blog] ')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Build the article
+        run: node scripts/publish-blog.js
+
+      - name: Publish to GitHub Pages
+        run: |
+          if git diff --quiet; then
+            echo "No publishable change was created."
+            exit 0
+          fi
+          git config user.name "Dimension 30 Publisher"
+          git config user.email "dimension30usa@users.noreply.github.com"
+          git add blog.html posts
+          git commit -m "Publish blog post from issue #${{ github.event.issue.number }}"
+          git pull --rebase origin main
+          git push origin main
