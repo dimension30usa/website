@@ -2,7 +2,7 @@ name: Publish Dimension 30 blog post
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
 
 permissions:
   contents: write
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   publish:
-    if: startsWith(github.event.issue.title, '[Blog] ')
+    if: contains(github.event.issue.body, '### Article') && contains(github.event.issue.body, '### Confirmation')
     runs-on: ubuntu-latest
     steps:
       - name: Check out the website
