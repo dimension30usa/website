@@ -61,11 +61,11 @@ function renderArticle(markdown) {
     if (!trimmed) {
       closeParagraph();
       closeList();
-    } else if (/^#{2,3}\s+/.test(trimmed)) {
+    } else if (/^#{2,3}\s*/.test(trimmed)) {
       closeParagraph();
       closeList();
       const level = trimmed.startsWith('### ') ? 3 : 2;
-      output.push('        <h' + level + '>' + inlineMarkdown(trimmed.replace(/^#{2,3}\s+/, '')) + '</h' + level + '>');
+      output.push('        <h' + level + '>' + inlineMarkdown(trimmed.replace(/^#{2,3}\s*/, '')) + '</h' + level + '>');
     } else if (/^>\s?/.test(trimmed)) {
       closeParagraph();
       closeList();
