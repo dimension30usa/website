@@ -88,7 +88,7 @@ function renderArticle(markdown) {
   return output.join('\n');
 }
 
-const title = issue.title.replace(/^\[Blog\]\s*/, '').trim();
+const title = issue.title.replace(/^\[Blog\]\s*/, '').replace(/^Title:\s*/i, '').trim();
 const category = field('Category') || 'Journal';
 const summary = field('Short description');
 const article = field('Article');
