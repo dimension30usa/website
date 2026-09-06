@@ -555,7 +555,7 @@ a {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -577,9 +577,17 @@ a {
 
 .testimonial-card figcaption {
   margin-top: 28px;
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: rgba(32,55,70,0.62);
+}
+
+.testimonial-note {
+  margin-top: 28px;
+  max-width: 900px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(32,55,70,0.78);
 }
 
 .placeholder-card {
